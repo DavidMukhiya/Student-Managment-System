@@ -27,15 +27,17 @@ public class MyController {
         return this.studentService.getStudentByID(Integer.parseInt(studentID));
     }
 
+    @PostMapping("/students")
+    public Student addStudent(@RequestBody Student student){
+        return this.studentService.addStudent(student);
+    }
+
+
     @PutMapping("/students")
-    public Student updateStudent(Student student){
+    public Student updateStudent(@RequestBody Student student){
         return this.studentService.updateStudent(student);
     }
 
-    @PostMapping("/students")
-    public Student addStudent(Student student){
-        return this.studentService.addStudent(student);
-    }
 
     @DeleteMapping("/students/{studentID}")
     public String deleteStudent(@PathVariable String studentID){

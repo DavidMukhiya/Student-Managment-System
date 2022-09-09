@@ -14,8 +14,7 @@ public class Student {
     public Student() {
     }
 
-    public Student(int studentID, String stdName, String faculty) {
-        this.studentID = studentID;
+    public Student(String stdName, String faculty) {
         this.stdName = stdName;
         this.faculty = faculty;
     }
